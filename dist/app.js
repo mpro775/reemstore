@@ -30,7 +30,7 @@ app.use((0, cors_1.default)({
 // الاتصال بقاعدة البيانات
 const connectDB = async () => {
     try {
-        await mongoose_1.default.connect(process.env.MONGODB_URI);
+        await mongoose_1.default.connect(process.env.MONGODB_URI || "mongodb+srv://engmuhammedmurad:m_pro1234@cluster0.bhsv7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
         console.log("🛢️  تم الاتصال مع قاعدة البيانات بنجاح");
         await createSuperAdmin();
     }
