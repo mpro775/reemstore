@@ -80,4 +80,4 @@ app.use("/api/items", itemRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api", uploadRoutes);
-app.use('/uploads', express.static('uploads'));
+app.use('/api/uploads', express.static('uploads'));
