@@ -8,7 +8,7 @@ export interface Iitem extends Document {
 
 const itemSchema = new Schema<Iitem>({
   name: { type: String, required: true },
-  image: { type: String, required: true },
+  image: { type: String},
   createdAt: { type: Date, default: Date.now },
 });
 
