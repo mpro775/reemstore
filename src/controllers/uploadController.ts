@@ -5,10 +5,15 @@ import { Request, Response } from "express";
 import { v4 as uuidv4 } from "uuid";
 import path from "path";
 
-export const uploadImage = async (req: Request, res: Response) => {
+export const uploadImage = async (
+  req: Request,
+  res: Response
+): Promise<void> => {
+  // ← هنا نوع الإرجاع
   try {
     if (!req.file) {
-      return res.status(400).json({ message: "No file uploaded" });
+      res.status(400).json({ message: "No file uploaded" });
+      return; // ← ضروري لتجنب إرسال ردود متعددة
     }
 
     const file = req.file;
