@@ -8,7 +8,7 @@ export interface ICategory extends Document {
 
 const categorySchema = new Schema<ICategory>({
   name: { type: String, required: true },
-  image: { type: String, required: true },
+  image: { type: String},
   createdAt: { type: Date, default: Date.now },
 });
 
